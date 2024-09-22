@@ -1,0 +1,22 @@
+HOMEWORK-4
+
+INTRO
+Dopo aver analizzato attentamente la traccia ho scomposto il problema in sottoproblemi a cui ho assegnato funzioni per semplificare il tutto.
+
+CALCOLA_STRINGA
+Questa funzione prende in input le righe del testo e restituisce la lista numerica degli accenti (secondo le regole stabilite dalla traccia).
+
+CORREGGI_MATRICE
+Questa funzione prende in input la matrice con tutti gli accenti numerici e aggiunge gli zeri necessari per pareggiare la lunghezza di tutte le righe.
+
+CREA_MATRICE
+Questa funzione prende in input la lista composta dalle righe del file si testo. Dopo di che crea una matrice contenente tutti gli accenti numerici sfruttando la funzione "calcola_stringa". Infine ritorna la matrice dopo essere stata corretta dalla funzione "correggi_matrice".
+
+CONFRONTA_AB
+Questa funzione prende in input le due righe della matrice da confrontare e il valore "tau". In base alle regole stabilite dalla traccia restituisce il valore desiderato.
+
+CALCOLA_SYNC
+Questa funzione prende in input la matrice generata con la funzione "crea_matrice" e il valore "tau". Dopo di che calcola il sync, secondo le regole stabilite dalla traccia, usufruendo della funzione "confronta_ab". Infine calcola la media di tutti i sync.
+
+PoemSync
+Questa è la funzione principale che prende in input il file di testo con il poema, il file di testo dove va scritta la matrice e il valore "tau". Prima di tutto apre il file del poema e crea una lista contenente le sue righe. Dopo di che, usufruendo della funzione "crea_matrice" scrive la matrice sul file di testo apposito. Infine ritorna la media dei sync usufruendo della funzione "calcola_sync".

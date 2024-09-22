@@ -1,0 +1,18 @@
+HOMEWORK-6
+
+Dopo aver letto la traccia ho ritenuto opportuno definire la classe palazzo per semplificare la manipolazione dei dati appartenenti ad essi. Dopo di ciò ho iniziato quindi a dividere il problema in sottoproblemi ai quali assegnare funzioni.
+
+ORDINA_DATI
+Questa funzione prende in input il contenuto del file di dati sottoforma di lista. Come output restituisce la stessa lista ma ripulita da spazi e '\t' e raggruppata in sottoliste per ogni palazzo.
+
+CREA_PALAZZI
+Questa funzione prende la lista ottenuta dalla funzione "ordina_dati" e restituisce una lista composta dagli oggetti della classe palazzo in base ai dati forniti.
+
+IMMAGINE_VUOTA
+Questa funzione prende in input la lista dei palazzi e la spaziatura minima e in base ad essi genera un'immagine completamente nera delle misure opportune.
+
+DISPONI_PALAZZI
+Questa funzione prende in input l'immagine generata dalla funzione "immagine_vuota", una fascia di palazzi (ovvero una riga della lista dei palazzi), la spaziatura minima e il numero di pixel occupati dalle fasce disegnate prima (in altezza). Dunque in base alle regole stabilite dalla traccia, la funzione disegna la fascia di palazzi nell'immagine.
+
+EX
+La funzione principale prende in input il file da cui leggere i dati, il file su cui salvare l'immagine e la spaziatura minima. Inanzitutto inserisco le righe del file dati in una lista. Dopo di che sistemo i dati della lista tramite la funzione "ordina_dati" e genero la lista di palazzi con la funzione "crea_palazzi". Creo dunque l'immagine vuota e, scorrendo la lista dei palazzi fascia per fasca, dispongo i palazzi nell'immagine. In fine salvo l'immagine sul file desiderato e ritorno la larghezza e la lunghezza dell'immagine. 
