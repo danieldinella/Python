@@ -1,0 +1,27 @@
+HOMEWORK 2
+
+Per calcolare la classifica dei partecipanti al gioco “Chi la spara più grossa” ho iniziato nello scomporre il problema in sotto problemi per i quali ho creato una funzione ciascuno.
+
+FUNZIONE “confronta”
+La funzione “confronta”, dopo aver rimosso ad ogni partecipante gli spazi e i '\t' dalle stringhe, le confronta lettera per lettera dopo averle convertite in codice ASCII in modo da assegnare i punti in base al parametro che è stato inserito:
+•	Se la differenza tra i due valori supera il parametro k allora prende il punto il giocatore con la lettera di valore minore;
+•	Se la differenza è minore o uguale al parametro k prende il punto il giocatore con la lettera di valore maggiore;
+•	Se le 2 lettere sono uguali il punto non viene assegnato a nessuno dei due giocatori.
+In fine dopo averli calcolati, la funzione restituisce i punteggi dei due sfidanti.
+
+FUNZIONE “somma_stringhe”
+Questa funzione viene chiamata in ballo solo se i punteggi ottenuti con la funzione confronta non bastano a decretare un vincitore. Dunque, dopo aver rimosso ad ogni partecipante gli spazi e i '\t' dalle stringhe, restituisce le somme dei valori ASCII delle due stringhe in modo da confrontarle in seguito per l'eventuale assegnazione di un punto.
+
+FUNZIONE “lessicografico”
+Questa è l’ultima funzione per assegnare i punti in caso di un ulteriore pareggio dopo l’esecuzione della funzione “somma_stringhe”. A questo punto, dopo aver rimosso ad ogni partecipante gli spazi e i '\t' dalle stringhe, si procede con il confronto lettera per lettera per decretare quale stringa ha la precedenza in ordine lessicografico, alla prima differenza di lettere la funzione ritorna 'True' se viene prima la lettera della prima stringa, altrimenti 'False'.
+
+FUNZIONE “ordina_classifica”
+Questa funzione prende in input il dizionario con i numeri dei partecipanti e i rispettivi punteggi e dopo averne creato un altro, ordinato in base ai punteggi in ordine decrescente (se due giocatori hanno lo stesso punteggio viene prima il giocatore con il numero inferiore), restituisce una lista contenente i numeri dei giocatori ordinati in classifica.
+
+FUNZIONE “ex”
+Questa funzione è l’ultima e la più importante perché si occupa di restituire il risultato effettivo sfruttando le altre funzioni. 
+Come parametri prende la lista delle stringhe dichiarate dai giocatori e il parametro k.
+Dopo di che inizia a scorrere tutti i partecipanti, facendo sì che ogni partecipante faccia n-1 sfide dove n è il numero di partecipanti.
+Per ogni sfida ha a disposizione le funzioni: “confronta”, “somma_stringhe” e “lessicografico” per assegnare un punto al vincitore della sfida.
+Il numero delle sfide vinte viene memorizzato in una lista che verrà poi usata per creare un dizionario contenente il numero di ogni partecipante come indice e il suo rispettivo numero di sfide vinte.
+Infine, viene chiamata la funzione “ordina_classifica” per ritornare il risultato, ovvero la lista con i partecipanti in ordine di classifica. 
